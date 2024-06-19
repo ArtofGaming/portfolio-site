@@ -4,6 +4,7 @@
  * @property {string} imgSrc Url de la imagen
  * @property {string} title Titulo de la tarjeta
  * @property {string[]} skills Array con tus habilidades ej: ['React', 'CSS', 'JavaScript']
+ * @property {string} discipline what type of work it is 
  * @property {string} descripcion La descripcion de la tarjeta
  * @property {string} demoURL Url de una pagina de demostración
  * @property {string} repoURL Url del repositorio, ej: https://github.com/usuario/repo
@@ -20,6 +21,7 @@ export const portafolioData = [
 		imgSrc: 'https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2021/06/copy-of-the-6-best-restaurant-website-templates-1.png',
 		title: 'Restaurant',
 		skills: ['React', 'StyledComponents'],
+		discipline: 'programming',
 		descripcion:
 			'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
 		demoURL: '',
@@ -98,6 +100,22 @@ export const getPortafolioData = portafolioData.map((item) => {
 	return {
 		// Se coloca todo el contenido previo del item
 		...item,
+		// Se cambian las skills por los iconos correspondientes
+		skills: item.skills.map((skill) => skillIcons[skill]),
+	};
+});
+export const getProgrammingPortafolioData = portafolioData.map((item) => {
+	return {
+		// Se coloca todo el contenido previo del item
+		...item => item.discipline == "programming",
+		// Se cambian las skills por los iconos correspondientes
+		skills: item.skills.map((skill) => skillIcons[skill]),
+	};
+});
+export const getDesignPortafolioData = portafolioData.map((item) => {
+	return {
+		// Se coloca todo el contenido previo del item
+		...item => item.discipline == "design",
 		// Se cambian las skills por los iconos correspondientes
 		skills: item.skills.map((skill) => skillIcons[skill]),
 	};

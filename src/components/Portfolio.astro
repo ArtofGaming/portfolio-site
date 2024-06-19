@@ -2,6 +2,7 @@
 import Title from './atoms/Title.astro';
 import { getPortafolioData} from "../components/data/portfolioData.js"
 import Card from './card-portfolio/CardPortfolio.astro';
+import Boton from './atoms/Boton.astro';
 ---
 
 <section
@@ -9,7 +10,10 @@ import Card from './card-portfolio/CardPortfolio.astro';
 	class="flex flex-col w-full  justify-center items-center h-auto min-h-[100dvh]  "
 >
 	<div class="portfolio__container">
-		<Title contenido="Portafolio" />
+		<Title contenido="Portfolio" />
+		<Boton href="#" texto="About Me"/>
+		<Boton class="disciplines_filter" onclick="sortProgramming" texto="Programming"/>
+		<Boton class="disciplines_filter" onclick="sortDesign" texto="Game/Level Design"/>
 		<div class="portfolio__elements">
 			{getPortafolioData.map((props) => <Card {...props} />)}
 		</div>
@@ -45,3 +49,5 @@ import Card from './card-portfolio/CardPortfolio.astro';
 		$img.onload = setBg;
 	});
 </script>
+
+
