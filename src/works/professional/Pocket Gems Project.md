@@ -27,9 +27,9 @@ theme:
 
 ### My Contribution Highlights
 
-    - Increased my average output by 100% within 1 month of being hired
-    - Created tools that eliminated common sources of error and sped up others' output
-    - Created documentation for new tools
+ - Increased my average output by 100% within 1 month of being hired
+ - Created tools that eliminated common sources of error and sped up others' output
+ - Created documentation for new tools
 
 ### What I Learned
 

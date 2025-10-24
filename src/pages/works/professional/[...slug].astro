@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
-
+import WorkLayout from '../../../layouts/WorkLayout.astro';
+export const prerender = true;
 export async function getStaticPaths() {
   const works = await getCollection('professional');
   return works.map(work => ({
@@ -11,3 +12,6 @@ export async function getStaticPaths() {
 const { work } = Astro.props;
 const { Content } = await render(work);
 ---
+<WorkLayout frontmatter={work.data}>
+  <Content />
+</WorkLayout>

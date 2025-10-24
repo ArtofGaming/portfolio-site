@@ -45,7 +45,7 @@ const allPosts = await getCollection("personal")
 				pubDate={work.data.pubDate}
 				title={work.data.title}
 				body={work.data.description}
-				href={`../works/${work.data.title}`}title={work.data.title}
+				href={`../works/professional/${work.id}/`}
 				image={work.data.image.url}
 				/>)}
 			</ul>
@@ -59,7 +59,7 @@ const allPosts = await getCollection("personal")
 				pubDate={projects.data.pubDate}
 				title={projects.data.title}
 				body={projects.data.description}
-				href={`../projects/${projects.data.title}`}title={projects.data.title}
+				href={`../works/personal/${projects.id}/`}
 				image={projects.data.image.url}
 				/>)}
 			</ul>
