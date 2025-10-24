@@ -1,0 +1,166 @@
+
+/* VARIABLES */
+
+:root {
+  /* Background Colors: */
+  --background-color: #36230c;
+  --content-background-color: #624112;
+  --sidebar-background-color: #170f04;
+  --sidebar-main-background-color:var(--link-color);
+
+  /* Text Colors: */
+  --text-color: #fef2eb;
+  --sidebar-title-text-color:var(--background-color);
+  --sidebar-text-color: #fef2eb;
+  --link-color: #ffc7ca;
+  --link-color-hover: #ffe2ca;
+
+  --font-size: 14px;
+  --margin: 5em;
+  --padding: 1em;
+}
+
+/* BASICS */
+h1 {
+  background: var(--content-background-color);
+}
+h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+body {
+  font-size: var(--font-size);
+  margin: var(--margin);
+  padding: var(--margin);
+  color: var(--text-color);
+  font-family: var(--font);
+  line-height: 1.2;
+  background: var(--background-color);
+  
+}
+
+::selection {
+  /* (Text highlighted by the user) */
+  background: rgba(0, 0, 0, 0.2);
+}
+
+mark {
+  /* Text highlighted by using the <mark> element */
+  text-shadow: 1px 1px 4px var(--link-color);
+  background-color: inherit;
+  color: var(--text-color);
+}
+
+main {
+  overflow-y: auto;
+  padding: var(--padding);
+  border: var(--border);
+  border-radius: var(--round-borders);
+}
+/* -------------------------------------------------------- */
+/* HEADER */
+/* -------------------------------------------------------- */
+
+header {
+  grid-area: header;
+  font-size: 1.2em;
+  border: var(--border);
+  border-radius: var(--round-borders);
+  background: var(--content-background-color);
+}
+
+.header-content {
+  padding: var(--padding);
+}
+
+.header-title {
+  /*font-family: var(--heading-font);*/
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.header-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* HEADINGS: */
+
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  /*font-family: var(--heading-font);*/
+  margin-bottom: 0;
+  line-height: 1.5;
+  
+}
+
+main h1:first-child,
+main h2:first-child,
+main h3:first-child,
+main h4:first-child,
+main h5:first-child,
+main h6:first-child {
+  margin-top: 0;
+}
+
+main h1 {
+  font-size: 1.5em;
+  background-color: var(--content-background-color);
+}
+
+main h2 {
+  
+  background-color: var(--content-background-color);
+  font-size: 1.4em;
+}
+
+main h3 {
+  background-color: var(--content-background-color);
+  font-size: 1.3em;
+}
+
+main h4 {
+  font-size: 1.2em;
+}
+
+main h5 {
+  font-size: 1.1em;
+}
+
+main h6 {
+  font-size: 1em;
+}
+
+
+  /*Cards*/
+  .card {
+    background-size: 300%;
+    padding-left: 0px;
+  }
+  .link-card-grid{
+    display: grid;
+    grid-template: 
+    "link-card link-card link-card";
+    grid-template-columns: 19rem;
+    grid-template-rows:15rem;
+    margin-top: 2em;
+    min-width: 19rem;
+    min-height: 0;
+    background-color: var(--background-color);
+    gap: .5em;
+    align-content: space-around;
+  }
+  .card-img{
+    display:grid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:0em;
+    max-width:80%; 
+    border-radius: 8px;;
+  }
+
+  

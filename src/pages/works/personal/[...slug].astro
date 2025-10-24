@@ -1,0 +1,14 @@
+---
+import { getCollection, render } from 'astro:content';
+import WorkLayout from '../../../layouts/WorkLayout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('personal');
+  return projects.map(project => ({
+    params: { slug: project.id }, props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---

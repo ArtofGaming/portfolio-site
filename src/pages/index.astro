@@ -1,11 +1,66 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
+import Card from '../components/Card.astro';
+import { getCollection } from "astro:content";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const allWork = await getCollection("professional");
+const allPosts = await getCollection("personal")
 ---
 
 <Layout>
-	<Welcome />
+	<h1>About</h1>
+	<p>
+		I am a junior programmer who has been making small games since I was 12. I graduated from 
+		Embry Riddle Aeronautical University with a degree in Simulation Science Games and 
+		Animation in 2024. This degree is a mix of computer science, art, game design, and 
+		production that taught me a lot about programming patterns and programming best practices. 
+	</p>
+	<p>
+		I love putting things together and taking them apart to figure out how they work as well
+		as solving puzzles. Game programming not only satisfies those desires but lets me work in 
+		an industry that I have been in awe of for over a decade. I also love that working in games
+		requires me to always be learning and pushing myself to improve since there are always new
+		engines to learn and new techniques to try.
+	</p>
+	<h1>Skills</h1>
+	<li>Unity</li>
+	<li>Unreal</li>
+	<li>Godot</li>
+	<li>C#</li>
+	<li>C++</li>
+	<li>Jira</li>
+	<li>Trello</li>
+	<li>Git and Github</li>
+	<li>Gitlab</li>
+	<h1>Projects</h1>
+	<h2>Professional Work</h2>
+	<ul role="list" class="link-card-grid">
+				{allWork.sort((a,b) => 
+				{
+					return Date.parse(a.data.pubDate.toUTCString()) - Date.parse(b.data.pubDate.toUTCString())
+				}
+				).map((work) => <Card
+				pubDate={work.data.pubDate}
+				title={work.data.title}
+				body={work.data.description}
+				href={`../works/${work.data.title}`}title={work.data.title}
+				image={work.data.image.url}
+				/>)}
+			</ul>
+	<h2>Personal Projects</h2>
+	<ul role="list" class="link-card-grid">
+				{allPosts.sort((a,b) => 
+				{
+					return Date.parse(a.data.pubDate.toUTCString()) - Date.parse(b.data.pubDate.toUTCString())
+				}
+				).map((projects) => <Card
+				pubDate={projects.data.pubDate}
+				title={projects.data.title}
+				body={projects.data.description}
+				href={`../projects/${projects.data.title}`}title={projects.data.title}
+				image={projects.data.image.url}
+				/>)}
+			</ul>
 </Layout>
