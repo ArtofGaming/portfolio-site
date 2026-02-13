@@ -1,7 +1,7 @@
 ---
 title: 'College Caper'
 pubDate: 2024-04-28
-description: 'Solo developer'
+description: "A small dressup game prototype I developed using MVC architecture. This game used SQL database to store items and their attributes and PHP on that backend. Then I used Unity to connect the database to the game."
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'

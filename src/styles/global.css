@@ -15,7 +15,7 @@
   --link-color: #ffc7ca;
   --link-color-hover: #ffe2ca;
 
-  --font-size: 14px;
+  --font-size: 18px;
   --margin: 5em;
   --padding: 1em;
 }
@@ -144,26 +144,31 @@ main h6 {
   .link-card-grid{
     display: grid;
     grid-template: 
-    "link-card link-card link-card";
-    grid-template-columns: 19rem;
+    "link-card";
+    grid-template-columns: 100%;
     grid-template-rows:15rem;
     margin-top: 2em;
-    min-width: 19rem;
     min-height: 0;
     background-color: var(--background-color);
     gap: .5em;
     align-content: space-around;
   }
   .card-img{
-    display:grid;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 2em;
+    margin-right: 2em;
     margin-top:0em;
-    max-width:80%; 
+    width:60%;
+    justify-content: left;
+    max-width:200px; 
     border-radius: 8px;;
   }
 
   a,
 a:visited {
   color: var(--link-color);
+}
+.container {
+  display: flex;
+  align-items: center;
+  padding: 1em;
 }

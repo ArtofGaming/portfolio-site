@@ -1,10 +1,11 @@
 ---
-title: 'Pocket Gems Project'
+title: 'Episode Reality Stars'
 pubDate: 2023-05-02
-description: 'Visual Storytelling Scripter'
+description: "As a Visual Storytelling Scripter on this mobile choose-your-own-adventure game, I used a scripting language to direct scenes. I also used this language to create small programs that sped up the other scripter's workflows and lower the likelihood of certain bugs occurring."
+link: 'https://play.google.com/store/apps/details?id=com.sodeepilabs.glamsquad&hl=en-US'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    url: '../../episodersappicon.png'
+    alt: 'The Episode Reality Stars app icon image featuring Keaton, Penelope and the protagonist.'
 tags: []
 theme:
     back-color: "white"
@@ -17,7 +18,7 @@ theme:
     }
     h4{
         color: rgb(228, 157, 126);
-        margin-bottom: -.5ch;
+        
         text-align: center;
     }
 </style>
@@ -26,7 +27,6 @@ theme:
 </p>
 
 ### My Contribution Highlights
-
  - Increased my average output by 100% within 1 month of being hired
  - Created tools that eliminated common sources of error and sped up others' output
  - Created documentation for new tools

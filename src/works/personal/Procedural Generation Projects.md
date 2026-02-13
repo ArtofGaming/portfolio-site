@@ -1,7 +1,7 @@
 ---
 title: 'Adventures in Procedural Generation'
 pubDate: 2025-04-04
-description: 'Solo developer'
+description: "Two small experiments in Godot and Unity trying out cellular automata to create cavern-like structures and binary spatial partitioning to create room based dungeons respectively."
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'

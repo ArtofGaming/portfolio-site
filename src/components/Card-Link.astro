@@ -5,13 +5,14 @@ interface Props {
 	href: string;
 	image: string;
 	pubDate: Date;
+	link: string;
 }
 
-const { href, title, body, image } = Astro.props;
+const { href, title, body, image, link} = Astro.props;
 ---
 <div style="padding-left:0; padding-right:0; min-height:0; overflow:hidden; border-radius:5px;">
 	<li class="link-card">
-		<a href={href}>
+		<a href={link}>
 			<div class="container">
 				<img class="card-img" src={image} alt="project image">
 				</img>
@@ -83,4 +84,3 @@ const { href, title, body, image } = Astro.props;
 		color: rgb(var(--accent-light));
 	}
 </style>
-
