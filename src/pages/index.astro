@@ -15,6 +15,7 @@ const allPosts = await getCollection("personal")
 	<div class="container">
 		<img src="../../Self Portrait.png" width="250" style="float: left;"> 
 		<div style="display: block; padding-left: 2em;">
+			<h2>Hello, I'm Campbell Turner.</h2>
 			<p>
 				I am a junior programmer who has been making small games since I was 12. I graduated from 
 				Embry Riddle Aeronautical University with a degree in Simulation Science Games and 
@@ -33,19 +34,24 @@ const allPosts = await getCollection("personal")
 	</div>
 	<h1>Skills</h1>
 	<div class="container" style="justify-content: center;">
-		
-		<div style="padding-right: 4em; text-align: center;">
+		<div style="padding-right: 4em">
 		<li>Unity</li>
 		<li>Unreal</li>
 		<li>Godot</li>
+		<li>Playdate SDK</li>
+		<li>Naninovel</li>
+		</div>
+		<div style="padding-right: 4em">
 		<li>C#</li>
 		<li>C++</li>
+		<li>Blueprints</li>
 		</div>
-		<div style="align-items: center; justify-content: center; ">
+		<div style="padding-right:4em ">
 		<li>Jira</li>
 		<li>Trello</li>
 		<li>Git and Github</li>
-		<li>Object Oriented Programming</li>
+		<li>Visual Studio</li>
+		<li>Visual Studio Code</li>
 		</div>
 	</div>
 	<div style="display: block;">
@@ -69,14 +75,14 @@ const allPosts = await getCollection("personal")
 	<ul role="list" class="link-card-grid">
 				{allPosts.sort((a,b) => 
 				{
-					return Date.parse(a.data.pubDate.toUTCString()) - Date.parse(b.data.pubDate.toUTCString())
+					return Date.parse(b.data.pubDate.toUTCString()) - Date.parse(a.data.pubDate.toUTCString())
 				}
 				).map((projects) => <Card
 				pubDate={projects.data.pubDate}
 				title={projects.data.title}
 				body={projects.data.description}
 				href={`../works/personal/${projects.id}/`}
-				image={projects.data.image.url}
+				tags={projects.data.tags}
 				/>)}
 			</ul>
 	</div>

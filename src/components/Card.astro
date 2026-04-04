@@ -3,22 +3,20 @@ interface Props {
 	title: string;
 	body: string;
 	href: string;
-	image: string;
 	pubDate: Date;
+	tags: string[];
 }
 
-const { href, title, body, image } = Astro.props;
+const { href, title, body, pubDate, tags } = Astro.props;
 ---
 <div style="padding-left:0; padding-right:0; min-height:0; overflow:hidden; border-radius:5px;">
 	<li class="link-card">
 		<a href={href}>
 			<div class="container">
-				<img class="card-img" src={image} alt="project image">
 				</img>
 				<div style="display:grid; align-self: bottom;">
-						<h2>
-							{title}
-						</h2>
+					<h2 style="display:flex; text-align:justify;">{title} <p> </p>{pubDate.toDateString()}</h2>
+					<p style="padding-left: 2em">Skills Used: {tags.map((tag) => (<span style="color:var(--link-color)">{tag} </span>))}</p>
 					<p style="padding-right: 2em; padding-left: 2em; padding-bottom:1ch">
 						{body}
 					</p>
@@ -31,22 +29,17 @@ const { href, title, body, image } = Astro.props;
 <style>
 	.link-card {
 		padding-top: 0em;
-		background-color: rgb(40, 25, 7);
-		background-image: none;
 	
 		min-height:0;
 		height:17rem;
 		width:100%;
 		border-radius: 5px;
-		background-position: 70%;
-		opacity: .7;
+		opacity: 1;
 		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 		text-overflow:hidden;
-		align-self: center;
 	}
 	.link-card > a {
 		text-decoration: none;
-		align-self: center;
 		
 		min-height:0;
 		height:17rem;
@@ -54,7 +47,7 @@ const { href, title, body, image } = Astro.props;
 		padding-top: calc(1rem);
 		width: 100%;
 		color: white;
-		opacity: 0.8;
+		opacity: 1;
 		text-overflow:hidden;
 	}
 	h2 {
@@ -64,15 +57,13 @@ const { href, title, body, image } = Astro.props;
 		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 		margin-top:0em;
 		padding-right: 2em;
-		background-color: #36230c;
+
 	}
 	p {
-		text-align: center;
 		overflow:hidden;
 		min-height:0;
 		margin-top: 0;
 		margin-bottom: 0;
-		background-color: #36230c;
 		padding-right: 2em;
 	}
 	.link-card:is(:hover, :focus-within) {
@@ -80,7 +71,7 @@ const { href, title, body, image } = Astro.props;
 		background-image: var(--accent-gradient);
 	}
 	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
+		color: rgb(var(--link-color));
 	}
 </style>
 

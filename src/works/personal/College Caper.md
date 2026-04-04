@@ -5,10 +5,11 @@ description: "A small dressup game prototype I developed using MVC architecture.
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["Databases", "C#", "Unity", "SQL"]
+tags: ["Databases", "C#", "Unity", "SQL", "PHP"]
 theme:
     back-color: "white"
 ---
+
 
 <style is:global>
     div{
@@ -31,6 +32,9 @@ theme:
 
 </p>
 
+## Engine
+## Language(s)
+
 ### Project Summary
 
 This fashion game is a solo project that utilizes MVC architecture to create a simple dress up game experience. The view layer is inside of Unity, and all the clothes are kept inside a catalogue database as well as a list of their attributes. Each item has different emotion values based off of their attributes and styles.
@@ -48,5 +52,5 @@ The tabs on the side filter items by clothing category and only those are sortab
     - Loading remote images for display in real time
     - Quick filtering of items without noticable slowdown
 
-### What I Learned
+### Code Highlight
 

@@ -4,16 +4,14 @@
 :root {
   /* Background Colors: */
   --background-color: #36230c;
-  --content-background-color: #624112;
-  --sidebar-background-color: #170f04;
-  --sidebar-main-background-color:var(--link-color);
+  --content-background-color: #95482a;
 
   /* Text Colors: */
   --text-color: #fef2eb;
   --sidebar-title-text-color:var(--background-color);
   --sidebar-text-color: #fef2eb;
-  --link-color: #ffc7ca;
-  --link-color-hover: #ffe2ca;
+  --link-color: #48aea9;
+  --link-color-hover: #1d4d68;
 
   --font-size: 18px;
   --margin: 5em;
@@ -42,13 +40,6 @@ body {
 ::selection {
   /* (Text highlighted by the user) */
   background: rgba(0, 0, 0, 0.2);
-}
-
-mark {
-  /* Text highlighted by using the <mark> element */
-  text-shadow: 1px 1px 4px var(--link-color);
-  background-color: inherit;
-  color: var(--text-color);
 }
 
 main {
