@@ -11,11 +11,11 @@ const allPosts = await getCollection("personal")
 ---
 
 <Layout>
-	
-	<div class="container">
-		<img src="../../Self Portrait.png" width="250" style="float: left;"> 
-		<div style="display: block; padding-left: 2em;">
-			<h2>Hello, I'm Campbell Turner.</h2>
+	<h2>Hello, I'm Campbell Turner.</h2>
+	<div class="container" style="">
+		
+		<img src="../../Self Portrait.png" width="20%" style="float: left;"> 
+		<div class="container" style="display:block; padding-left: 2em;">
 			<p>
 				I am a junior programmer who has been making small games since I was 12. I graduated from 
 				Embry Riddle Aeronautical University with a degree in Simulation Science Games and 
@@ -72,7 +72,7 @@ const allPosts = await getCollection("personal")
 				/>)}
 			</ul>
 	<h2>Personal Projects</h2>
-	<ul role="list" class="link-card-grid">
+	<ul role="list" class="link-card-grid-no-img">
 				{allPosts.sort((a,b) => 
 				{
 					return Date.parse(b.data.pubDate.toUTCString()) - Date.parse(a.data.pubDate.toUTCString())

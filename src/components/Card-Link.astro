@@ -16,11 +16,11 @@ const { href, title, body, image, link} = Astro.props;
 			<div class="container">
 				<img class="card-img" src={image} alt="project image">
 				</img>
-				<div style="display:grid; align-self: bottom;">
+				<div style="display:grid; align-self: bottom;height:auto; width:100%;">
 						<h2>
 							{title}
 						</h2>
-					<p style="padding-right: 2em; padding-left: 2em; padding-bottom:1ch">
+					<p style=" padding-bottom:1ch">
 						{body}
 					</p>
 				</div>
@@ -33,7 +33,8 @@ const { href, title, body, image, link} = Astro.props;
 	.link-card {
 		padding-top: 0em;
 		min-height:0;
-		height:17rem;
+		max-height:17rem;
+		height:auto;
 		width:100%;
 		border-radius: 1px;
 		opacity: .7;
@@ -46,7 +47,8 @@ const { href, title, body, image, link} = Astro.props;
 		align-self: center;
 		
 		min-height:0;
-		height:17rem;
+		max-height:17rem;
+		height:auto;
 		line-height: 1.4;
 		padding-top: calc(1rem);
 		width: 100%;
@@ -64,8 +66,8 @@ const { href, title, body, image, link} = Astro.props;
 	}
 	p {
 		text-align: center;
-		overflow:hidden;
-		min-height:0;
+		width:100%;
+		height:auto;
 		margin-top: 0;
 		margin-bottom: 0;
 		padding-right: 2em;

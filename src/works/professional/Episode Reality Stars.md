@@ -1,7 +1,7 @@
 ---
 title: 'Episode Reality Stars'
-pubDate: 2023-05-02
-description: "As a Visual Storytelling Scripter on this mobile choose-your-own-adventure game, I used a scripting language to direct scenes. I also used this language to create small programs that sped up the other scripter's workflows and lower the likelihood of certain bugs occurring."
+pubDate: 2025-12-20
+description: "As a Visual Storytelling Scripter on this mobile choose-your-own-adventure game, I used a scripting language to direct scenes. I also used this language to create small tools that sped up the other scripter's workflows and lower the likelihood of certain bugs occurring."
 link: 'https://play.google.com/store/apps/details?id=com.sodeepilabs.glamsquad&hl=en-US'
 image:
     url: '../../episodersappicon.png'
